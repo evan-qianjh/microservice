@@ -31,7 +31,6 @@
         <module>config</module>
         <module>hystrix</module>
         <module>gateway</module>
-        <module>web-admin</module>
         <module>zipkin</module>
         <module>dashboard</module>
         <module>lib</module>
