@@ -1,0 +1,16 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: discovery
+  cloud:
+    config:
+      uri: http://config:8888
+      profile: qianjh
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  server:
+    enable-self-preservation: false # 关闭自我保护，保证会注销服务，清理无效节点
+    eviction-interval-timer-in-ms: 60000 # 清理无效节点间隔（毫秒）
