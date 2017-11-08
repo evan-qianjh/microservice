@@ -27,16 +27,18 @@
     </properties>
 
     <modules>
-        <module>service-customer</module>
         <module>discovery</module>
         <module>config</module>
-        <module>lib-mybatis</module>
-        <module>lib-common</module>
         <module>hystrix</module>
         <module>gateway</module>
         <module>web-admin</module>
         <module>zipkin</module>
         <module>dashboard</module>
+        <module>lib</module>
+        <module>service</module>
+        <module>web</module>
+        <module>api</module>
+        <module>app</module>
     </modules>
 
     <dependencies>
@@ -44,12 +46,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
-        </dependency>
-
-        <!--eureka-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka</artifactId>
         </dependency>
     </dependencies>
 
