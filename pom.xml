@@ -31,7 +31,6 @@
         <module>config</module>
         <module>hystrix</module>
         <module>gateway</module>
-        <module>web-admin</module>
         <module>zipkin</module>
         <module>dashboard</module>
         <module>lib</module>
@@ -42,6 +41,20 @@
     </modules>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

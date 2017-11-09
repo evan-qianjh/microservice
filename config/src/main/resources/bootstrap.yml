@@ -1,0 +1,31 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: config
+  profiles:
+    active: subversion
+  cloud:
+    config:
+      server:
+        svn:
+          uri: svn://svn.xxx.com/config
+          username: dev
+          password: 123456
+          basedir: /home/qianjh/config
+          default-label: trunk
+    stream:
+      kafka:
+        binder:
+          brokers: 192.168.1.30
+          zkNodes: 192.168.1.30
+          zk-connection-timeout: 10000
+eureka:
+  instance:
+    refer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    hostname: ${spring.cloud.client.ipAddress}
+logging:
+  file: ./config.log
+  level:
+    com.qianjh.microservice: debug
