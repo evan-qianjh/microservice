@@ -16,7 +16,7 @@
 | lib-mybatis                    | com.qianjh.microservice.lib.mybatis.[config/mapper] | 
 | service                        | | 
 | service-customer               | | 
-| service-customer-model         | com.qianjh.microservice.model.[domain/view] | 
+| service-customer-model         | com.qianjh.microservice.model.customer.[domain/view] | 
 | service-customer-client        | com.qianjh.microservice.client.customer | 
 | service-customer-event         | com.qianjh.microservice.event.customer | 
 | service-customer-impl          | com.qianjh.microservice.[controller/service/mapper] | 
