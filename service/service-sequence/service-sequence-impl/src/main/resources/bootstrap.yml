@@ -1,0 +1,31 @@
+server:
+  port: 0
+spring:
+  application:
+    name: service-adapter-uhuiq
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: mysql://localhost:3306/microservice?&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: qjhare
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    jackson:
+      serialization:
+        indent-output: true
+    cache:
+      type: ehcache
+      ehcache:
+        config: ehcache.xml
+eureka:
+  instance:
+    refer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+    hostname: ${spring.cloud.client.ipAddress}

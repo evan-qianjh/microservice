@@ -3,33 +3,34 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>microservice</artifactId>
+        <artifactId>service-sequence</artifactId>
         <groupId>com.qianjh.microservice</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>service</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>service-customer</module>
-        <module>service-email</module>
-        <module>service-sequence</module>
-    </modules>
+    <artifactId>service-sequence-impl</artifactId>
 
     <dependencies>
+        <!--model-->
         <dependency>
             <groupId>com.qianjh.microservice</groupId>
-            <artifactId>lib-core</artifactId>
+            <artifactId>service-sequence-model</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+        <!--lib-->
+        <dependency>
+            <groupId>com.qianjh.microservice</groupId>
+            <artifactId>lib-druid</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
-            <groupId>com.qianjh.microservice</groupId>
-            <artifactId>lib-swagger</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
+
     </dependencies>
-
 
 </project>
