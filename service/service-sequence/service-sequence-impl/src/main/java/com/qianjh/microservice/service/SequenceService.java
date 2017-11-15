@@ -1,29 +1,26 @@
 package com.qianjh.microservice.service;
 
-import org.springframework.transaction.annotation.Transactional;
-
 import java.util.Queue;
 
 /**
  * @author QianJH
+ * @date 2017/11/14
  */
 public interface SequenceService {
 
     /**
-     * 创建递增序列
+     * 获取递增序列
      *
-     * @param seqName 序列名称
+     * @param id
      * @return
      */
-    @Transactional(rollbackFor = RuntimeException.class)
-    Queue<Long> createIncrementSeq(String seqName);
+    Queue<Long> createIncrementSeq(Long id);
 
     /**
-     * 创建规则序列
+     * 获取规则序列
      *
-     * @param seqName 序列名称
+     * @param id
      * @return
      */
-    @Transactional(rollbackFor = RuntimeException.class)
-    Queue<String> createRuleSeq(String seqName);
+    Queue<String> createRuleSeq(Long id);
 }
